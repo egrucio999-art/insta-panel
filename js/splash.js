@@ -1,10 +1,21 @@
 document.getElementById('continueBtn').addEventListener('click', () => {
-  document.getElementById('loading').style.display = 'block';
-  document.getElementById('continueBtn').disabled = true;
-  document.getElementById('continueBtn').textContent = 'Загрузка...';
+  const btn = document.getElementById('continueBtn');
+  const loading = document.getElementById('loading');
 
-  // Через 1.5 секунды — переход на profile.html
+  btn.disabled = true;
+  btn.textContent = 'Загрузка...';
+  loading.style.display = 'block';
+  loading.textContent = 'Проверка сессии...';
+
+  setTimeout(() => {
+    loading.textContent = 'Загрузка профиля...';
+  }, 700);
+
+  setTimeout(() => {
+    loading.textContent = 'Синхронизация данных...';
+  }, 1300);
+
   setTimeout(() => {
     window.location.href = 'profile.html';
-  }, 1500);
+  }, 1800);
 });
