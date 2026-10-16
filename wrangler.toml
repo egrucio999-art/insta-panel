@@ -1,0 +1,7 @@
+name = "insta-panel"
+pages_build_output_dir = "."
+compatibility_date = "2026-01-01"
+
+[[kv_namespaces]]
+binding = "IPS"
+id = "18495b9c73b14ed4b0d8365fd0a2e64e"
