@@ -1,0 +1,44 @@
+#!/bin/bash
+cd ~/insta-panel
+
+echo "[*] Сохраняю оригинальный index.html..."
+cp index.html index.html.bak
+
+echo "[*] Ставлю заглушку..."
+cat > index.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background:#000; color:#f5f5f5; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px; text-align:center; }
+.container { max-width:400px; }
+.logo { font-family:"Billabong",cursive,sans-serif; font-size:48px; margin-bottom:40px; background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+h1 { font-size:22px; margin-bottom:12px; font-weight:600; }
+p { color:#a8a8a8; font-size:14px; line-height:1.5; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">Instagram</div>
+  <h1>Сайт временно недоступен</h1>
+  <p>Мы проводим технические работы. Пожалуйста, попробуйте позже.</p>
+</div>
+</body>
+</html>
+HTMLEOF
+
+echo "[*] Push..."
+git add -A
+git commit -m "maintenance mode" || echo "nothing"
+git push
+
+echo "[*] Форсирую деплой..."
+npx wrangler pages deploy . --project-name=insta-panel --commit-dirty=true
+
+echo ""
+echo "[+] Сайт в режиме обслуживания."
+echo "[+] Чтобы вернуть: cp index.html.bak index.html && git add -A && git commit -m 'restore' && git push"
