@@ -1,5 +1,0 @@
-logs/
-*.log
-*.pid
-*.tar.gz
-server.log
