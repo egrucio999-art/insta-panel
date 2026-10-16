@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path.home() / "fake-panel"
+ROOT = Path.home() / "insta-panel"
 SVGS_FILE = ROOT / "instagram_svgs.json"
 
 # Маппинг: русский label → ключ
