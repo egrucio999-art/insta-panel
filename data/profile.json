@@ -1,0 +1,19 @@
+{
+  "username": "game_uppp",
+  "full_name": "Game Upp Progressive Performance",
+  "bio": "Sports & Fitness Instruction\nPerformance Culture\nHead Coach @osavystskyi\nTrain...\nLearn...",
+  "link": "gameupp.link",
+  "followers": 1088,
+  "following": 887,
+  "posts": 28,
+  "avatar": "img/avatar.jpg",
+  "highlights": [
+    {"label": "GAMEKIDS", "img": "img/posts/1.jpg"},
+    {"label": "LEVEL UP", "img": "img/posts/2.jpg"},
+    {"label": "PRO GRIND", "img": "img/posts/3.jpg"},
+    {"label": "GIRLS UP", "img": "img/posts/4.jpg"},
+    {"label": "GAMEUP", "img": "img/posts/5.jpg"},
+    {"label": "BOYS CLUB", "img": "img/posts/6.jpg"},
+    {"label": "FOOTY LAB", "img": "img/posts/7.jpg"}
+  ]
+}

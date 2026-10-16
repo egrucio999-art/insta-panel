@@ -1,0 +1,45 @@
+[
+  {
+    "type": "viewer_kicked",
+    "data": {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+      "language": "en-US",
+      "platform": "Linux x86_64",
+      "screen": "1920x1080",
+      "timezone": "Europe/Madrid",
+      "referer": "",
+      "url": "http://127.0.0.1:8000/"
+    },
+    "ip": "127.0.0.1",
+    "time": "2026-10-16 22:26:43",
+    "referer": "http://127.0.0.1:8000/"
+  },
+  {
+    "type": "viewer_kicked",
+    "data": {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+      "language": "en-US",
+      "platform": "Linux x86_64",
+      "screen": "1920x1080",
+      "timezone": "Europe/Madrid",
+      "referer": "",
+      "url": "http://localhost:8000/"
+    },
+    "ip": "127.0.0.1",
+    "time": "2026-10-17 00:28:19"
+  },
+  {
+    "type": "viewer_kicked",
+    "data": {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+      "language": "en-US",
+      "platform": "Linux x86_64",
+      "screen": "1920x1080",
+      "timezone": "Europe/Madrid",
+      "referer": "",
+      "url": "http://localhost:8000/"
+    },
+    "ip": "127.0.0.1",
+    "time": "2026-10-17 00:28:58"
+  }
+]

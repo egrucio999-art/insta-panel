@@ -1,0 +1,7 @@
+[
+  {"user": "kate_dev", "avatar": "img/chats/1.jpg", "last": "скинула файлы, глянь", "time": "2м", "unread": true},
+  {"user": "max_stream", "avatar": "img/chats/2.jpg", "last": "го вечером", "time": "1ч", "unread": false},
+  {"user": "unknown_user", "avatar": "img/chats/3.jpg", "last": "есть разговор", "time": "3ч", "unread": true},
+  {"user": "igor_ops", "avatar": "img/chats/4.jpg", "last": "всё готово", "time": "5ч", "unread": false},
+  {"user": "phantom_node", "avatar": "img/chats/5.jpg", "last": "канал чистый", "time": "1д", "unread": false}
+]
